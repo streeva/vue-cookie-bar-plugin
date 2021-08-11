@@ -1,8 +1,13 @@
 <template>
   <transition name="cookie-bar-transition" appear>
-    <div v-if="!cookiesResolved" id="cookie-notification" class="cookie-bar">
+    <div
+      id="cookie-notification"
+      class="cookie-bar"
+      data-display="flex"
+      style="display: none"
+    >
       <div class="cookie-bar__container">
-        <div class="cookie-bar__notification" role="alert" data-display="flex">
+        <div class="cookie-bar__notification" role="alert">
           <div class="cookie-bar__text">
             <h2 class="cookie-bar__title">
               <slot name="title"></slot>
@@ -29,77 +34,15 @@
           </div>
         </div>
       </div>
-      <Overlay />
     </div>
   </transition>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import Haven from '@chiiya/haven'
-import { HavenOptions } from '@chiiya/haven/dist/types'
-import Overlay from './Overlay.vue'
 
-@Component({
-  components: {
-    Overlay,
-  },
-})
-export default class CookieBar extends Vue {
-  $haven: typeof Haven | undefined
-  $havenOptions: HavenOptions | undefined
-  cookiesResolved = true
-
-  created(): void {
-    this.cookiesResolved = this.hasResolvedCookies()
-  }
-
-  mounted(): void {
-    if (this.$haven !== undefined) {
-      this.$haven.on('analytics-enabled', this.handleCookies)
-      this.$haven.on('analytics-disabled', this.handleCookies)
-    }
-  }
-
-  hasResolvedCookies(): boolean {
-    const key = 'cookies-resolved'
-    const cookie = new RegExp(`${key}=(.*?); `, 'gm').exec(
-      `${document.cookie}; `
-    )
-    return cookie !== null
-  }
-
-  handleCookies(): void {
-    this.cookiesResolved = true
-    this.setCookie('cookies-resolved', true, 365)
-  }
-
-  setCookie(name: string, value: string | boolean, days?: number): void {
-    let domains: string[] = []
-
-    if (this.$havenOptions !== undefined) {
-      domains = this.$havenOptions.domains
-    }
-
-    domains.forEach((domain: string) => {
-      let domainAttr = ''
-      if (window.location.hostname !== 'localhost') {
-        domainAttr = `; domain=${domain}`
-      }
-
-      let expires = ''
-      if (days) {
-        const date = new Date()
-        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
-        expires = `; expires=${date.toUTCString()}`
-      }
-
-      document.cookie = `${name}=${
-        value || ''
-      }${expires}; path=/${domainAttr}; SameSite=Lax`
-    })
-  }
-}
+@Component
+export default class CookieBar extends Vue {}
 </script>
 
 <style lang="scss">
@@ -149,12 +92,24 @@ $white: #fff;
   position: relative;
   z-index: 2000000000;
 
+  &:after {
+    content: '';
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba($black, 0.3);
+    z-index: -1;
+  }
+
   &__container {
     position: fixed;
     bottom: $pos;
     left: $pos;
     right: $pos;
-    background: white;
+    background: $white;
     padding: $mobilePad;
     box-shadow: 0 4px 30px rgba(121, 153, 175, 0.3),
       0 4px 8px rgba(121, 153, 175, 0.15), 0 0 0 1px #dee5ea inset;
