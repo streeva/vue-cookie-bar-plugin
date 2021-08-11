@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CookieBar.vue renders cookie bar container 1`] = `
-<div id="cookie-notification" class="cookie-bar">
+<div id="cookie-notification" data-display="flex" class="cookie-bar" style="display: none;">
   <div class="cookie-bar__container">
-    <div role="alert" data-display="flex" class="cookie-bar__notification">
+    <div role="alert" class="cookie-bar__notification">
       <div class="cookie-bar__text">
         <h2 class="cookie-bar__title"></h2>
         <p class="no-margin"></p>
@@ -17,6 +17,5 @@ exports[`CookieBar.vue renders cookie bar container 1`] = `
       </div>
     </div>
   </div>
-  <overlay-stub></overlay-stub>
 </div>
 `;

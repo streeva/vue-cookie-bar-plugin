@@ -8,11 +8,6 @@ describe('CookieBar.vue', () => {
     wrapper = shallowMount(CookieBar)
   })
 
-  it('renders overlay', () => {
-    const overlay = wrapper.find('overlay-stub')
-    expect(overlay.exists()).toBe(true)
-  })
-
   it('renders cookie bar container', () => {
     const cookieNotification = wrapper.findAll('div').at(0)
 
