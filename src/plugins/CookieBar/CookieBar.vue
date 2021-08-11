@@ -105,7 +105,7 @@ export default class CookieBar extends Vue {
 <style lang="scss">
 @use "sass:math";
 
-$primary-font: 'Poppins' sans-serif;
+$primary-font: 'Poppins', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
 $pos: 20px;
 $pad: 30px;
