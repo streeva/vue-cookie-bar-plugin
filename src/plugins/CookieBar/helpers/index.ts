@@ -1,4 +1,4 @@
-export const hasValidHavenOptions = (opts: any) => {
+export const hasValidHavenOptions = (opts: any): boolean => {
   try {
     return (
       Array.isArray(opts.domains) &&

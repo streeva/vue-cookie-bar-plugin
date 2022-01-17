@@ -1,14 +1,16 @@
 {
   "name": "@streeva/vue-cookie-bar-plugin",
   "version": "1.0.1",
-  "license" : "MIT",
+  "license": "MIT",
   "private": false,
   "repository": "https://github.com/streeva/vue-cookie-bar-plugin",
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve --public localhost:8080 --port 8080",
     "build": "vue-cli-service build",
-    "build-library" : "vue-cli-service build --target lib --name vue-cookie-bar-plugin ./src/plugins/CookieBar/index.ts",
+    "build-library": "vue-cli-service build --target lib --name vue-cookie-bar-plugin ./src/plugins/CookieBar/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -22,13 +24,13 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-plugin-typescript": "^4.5.13",
+    "@vue/cli-plugin-unit-jest": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^1.0.3",
