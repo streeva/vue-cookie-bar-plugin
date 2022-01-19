@@ -42,5 +42,14 @@
     "sass-loader": "^8.0.2",
     "typescript": "~4.1.6",
     "vue-template-compiler": "^2.6.14"
+  },
+  "overrides": {
+    "ansi-regex": "^5.0.1",
+    "glob-parent": "^5.1.2",
+    "node-forge": "^1.1.0",
+    "node-notifier": "^8.0.1",
+    "nth-check": "^2.0.1",
+    "postcss": "^7.0.39",
+    "yargs-parser": "^13.1.2"
   }
 }
