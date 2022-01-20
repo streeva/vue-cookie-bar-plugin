@@ -1,44 +1,55 @@
 {
   "name": "@streeva/vue-cookie-bar-plugin",
-  "version": "1.0.1",
-  "license" : "MIT",
+  "version": "1.0.2",
+  "license": "MIT",
   "private": false,
   "repository": "https://github.com/streeva/vue-cookie-bar-plugin",
-  "files": ["dist/*"],
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve --public localhost:8080 --port 8080",
     "build": "vue-cli-service build",
-    "build-library" : "vue-cli-service build --target lib --name vue-cookie-bar-plugin ./src/plugins/CookieBar/index.ts",
+    "build-library": "vue-cli-service build --target lib --name vue-cookie-bar-plugin ./src/plugins/CookieBar/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "main": "./dist/vue-cookie-bar-plugin.common.js",
   "dependencies": {
     "@chiiya/haven": "^0.7.0",
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-class-component": "^7.2.3",
+    "core-js": "^3.20.3",
+    "vue": "^2.6.14",
+    "vue-class-component": "^7.2.6",
     "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.19",
-    "@typescript-eslint/eslint-plugin": "^4.18.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@types/jest": "^24.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "@vue/cli-plugin-babel": "^4.5.15",
+    "@vue/cli-plugin-eslint": "^4.5.15",
+    "@vue/cli-plugin-typescript": "^4.5.15",
+    "@vue/cli-plugin-unit-jest": "^4.5.15",
+    "@vue/cli-service": "^4.5.15",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
-    "@vue/test-utils": "^1.0.3",
+    "@vue/test-utils": "^1.3.0",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.2.1",
-    "sass": "^1.26.5",
+    "sass": "^1.49.0",
     "sass-loader": "^8.0.2",
-    "typescript": "~4.1.5",
-    "vue-template-compiler": "^2.6.11"
+    "typescript": "~4.1.6",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "overrides": {
+    "ansi-regex": "^5.0.1",
+    "glob-parent": "^5.1.2",
+    "node-forge": "^1.1.0",
+    "node-notifier": "^8.0.1",
+    "nth-check": "^2.0.1",
+    "postcss": "^7.0.39",
+    "yargs-parser": "^13.1.2"
   }
 }
