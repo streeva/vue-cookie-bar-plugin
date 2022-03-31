@@ -1,6 +1,6 @@
 {
   "name": "@streeva/vue-cookie-bar-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "private": false,
   "repository": "https://github.com/streeva/vue-cookie-bar-plugin",
@@ -10,7 +10,7 @@
   "scripts": {
     "serve": "vue-cli-service serve --public localhost:8080 --port 8080",
     "build": "vue-cli-service build",
-    "build-library": "vue-cli-service build --target lib --name vue-cookie-bar-plugin ./src/plugins/CookieBar/index.ts",
+    "build-library": "vue-cli-service build --target lib --inline-vue --name vue-cookie-bar-plugin ./src/plugins/CookieBar/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
