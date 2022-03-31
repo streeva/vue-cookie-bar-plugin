@@ -67,23 +67,23 @@ This is the dev environment for the plugin and includes a single page with the c
 
 The plugin is packaged up whenever there is a release published. It is then published to NPM under streeva org.
 
-#### Install modules
+### Install modules
 
 ```
 npm install
 ```
 
-#### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-#### Compiles and minifies for production
+### Compiles and minifies for production
 ```
 npm run build
 ```
 
-#### Compiles and minifies a library for production
+### Compiles and minifies a library for production
 
 This command is run when a push to master occurs, note that if the push hasn't changed the version property in package.json then nothing will be pushed the GitHub package repository.
 
@@ -91,12 +91,23 @@ This command is run when a push to master occurs, note that if the push hasn't c
 npm run build-library
 ```
 
-#### Run your unit tests
+### Run your unit tests
 ```
 npm run test:unit
 ```
 
-#### Lints and fixes files
+### Lints and fixes files
 ```
 npm run lint
 ```
+
+## Testing the plugin within another project
+
+If you want to test or edit this project from within another project without uploading and downloading to NPM each time then [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link) provides a useful way to be able to symlink straight to this project. E.g.
+
+```
+cd ~/src/ui                        # go into the dir of your main project
+npm link ../vue-cookie-bar-plugin  # link the dir of your dependency
+```
+
+The symlink can be seen or deleted by visiting `/lib/node_modules`. See the [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link) docs for more info.
