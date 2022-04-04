@@ -106,7 +106,7 @@ npm run lint
 If you want to test or edit this project from within another project without uploading and downloading to NPM each time then [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link) provides a useful way to be able to symlink straight to this project. E.g.
 
 ```
-cd ~/src/swiftaid-donor-ui-web     # go into the dir of your main project
+cd ~/src/ui                        # go into the dir of your main project
 npm link ../vue-cookie-bar-plugin  # link the dir of your dependency
 ```
 
@@ -118,8 +118,8 @@ Change to cookie plugin directory:
 - Make your alterations
 - `npm run build-library`
 
-Change to donor UI directory:
-- `cd ~/src/swiftaid-donor-ui-web`
+Change to UI directory:
+- `cd ~/src/ui`
 - `rm -rf node_modules`
 - `npm i`
 - `npm link ../vue-cookie-bar-plugin`
