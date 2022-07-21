@@ -21,9 +21,9 @@ jobs:
         cache: 'npm'
 
     - name: Output versions
-        run: |
-          echo "Node.js version: $(node --version)"
-          echo "NPM version: $(npm --version)"
+      run: |
+        echo "Node.js version: $(node --version)"
+        echo "NPM version: $(npm --version)"
 
     - name: Install node modules
       run: npm ci
