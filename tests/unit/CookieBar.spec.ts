@@ -1,11 +1,19 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
 import CookieBar from '@/plugins/CookieBar/CookieBar.vue'
 
 let wrapper: any
 
 describe('CookieBar.vue', () => {
   beforeAll(() => {
-    wrapper = shallowMount(CookieBar)
+    wrapper = shallowMount(CookieBar, {
+      localVue: createLocalVue(),
+      mocks: {
+        $haven: {
+          create: jest.fn(),
+        },
+        $havenOptions: {},
+      },
+    })
   })
 
   it('renders cookie bar container', () => {
