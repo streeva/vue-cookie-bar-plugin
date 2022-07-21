@@ -19,6 +19,11 @@ jobs:
         node-version: '16.13.0'
         cache: 'npm'
 
+    - name: Output versions
+      run: |
+        echo "Node.js version: $(node --version)"
+        echo "NPM version: $(npm --version)"
+
     - name: NPM install
       run: npm ci
 
