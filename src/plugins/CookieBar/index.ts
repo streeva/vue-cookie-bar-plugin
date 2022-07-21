@@ -21,9 +21,6 @@ const CookieBarWrapper = {
     // Init CookieBar
     Vue.component('CookieBar', CookieBar)
 
-    // Init Haven
-    Haven.create(options.havenOptions)
-
     // Add Haven and havenOptions instance property to Vue components
     Vue.prototype.$haven = Haven
     Vue.prototype.$havenOptions = options.havenOptions

@@ -38,21 +38,21 @@
   </transition>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-
-@Component
-export default class CookieBar extends Vue {}
+<script>
+export default {
+  name: 'CookieBar',
+  mounted() {
+    this.$haven.create(this.$havenOptions)
+  },
+}
 </script>
 
 <style lang="scss">
-@use 'sass:math';
-
 $primary-font: 'Poppins', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
 $pos: 20px;
 $pad: 30px;
-$mobilePad: math.div($pad, 1.5);
+$mobilePad: 20px;
 $btn-height: 52px;
 $btn-height-sm: 38px;
 $primary-color: #00a8f4;
@@ -211,7 +211,7 @@ $white: #fff;
     text-align: left;
     padding: 0;
     line-height: 1.2;
-    margin: 0 0 math.div($mobilePad, 2) 0;
+    margin: 0 0 10px 0;
 
     @include mobile-up {
       font-size: 20px;
