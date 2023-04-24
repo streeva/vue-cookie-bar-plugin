@@ -21,12 +21,14 @@
               <button
                 id="cookie-notification__accept"
                 class="cookie-bar__button cookie-bar__button--primary"
+                tabindex="1"
               >
                 Accept
               </button>
               <button
                 id="cookie-notification__decline"
                 class="cookie-bar__button cookie-bar__button--secondary"
+                tabindex="2"
               >
                 Decline
               </button>
