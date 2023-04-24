@@ -3,16 +3,19 @@
     <div
       id="cookie-notification"
       class="cookie-bar"
+      role="dialog"
+      aria-labelledby="cookieBarDialogTitle"
+      aria-describedby="cookieBarDialogDesc"
       data-display="flex"
       style="display: none"
     >
       <div class="cookie-bar__container">
         <div class="cookie-bar__notification" role="alert">
           <div class="cookie-bar__text">
-            <h2 class="cookie-bar__title">
+            <h2 id="cookieBarDialogTitle" class="cookie-bar__title">
               <slot name="title"></slot>
             </h2>
-            <p class="no-margin">
+            <p id="cookieBarDialogDesc" class="no-margin">
               <slot name="text"></slot>
             </p>
           </div>
