@@ -9,9 +9,9 @@ exports[`CookieBar.vue renders cookie bar container 1`] = `
         <p class="no-margin"></p>
       </div>
       <div class="cookie-bar__actions">
-        <div class="cookie-bar__buttons"><button id="cookie-notification__accept" class="cookie-bar__button cookie-bar__button--primary">
+        <div class="cookie-bar__buttons"><button id="cookie-notification__accept" tabindex="1" class="cookie-bar__button cookie-bar__button--primary">
             Accept
-          </button> <button id="cookie-notification__decline" class="cookie-bar__button cookie-bar__button--secondary">
+          </button> <button id="cookie-notification__decline" tabindex="2" class="cookie-bar__button cookie-bar__button--secondary">
             Decline
           </button></div>
       </div>
